@@ -20,4 +20,53 @@
  		WHERE
  			`id` = #{id}
  	</select>
+ 	<!-- lesson 03 ex02_1 -->
+ 	<insert id="insertReview" 
+ 	parameterType="com.example.lesson03.domain.Review">
+ 	<!-- parameterType에 Review domain을 넣는다 -->
+ 		INSERT INTO `new_review`
+ 		(
+ 			`storeId`
+			, `menu`
+			, `userName`
+			, `point`
+			, `review`
+			, `createdAt`
+			, `updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, NOW()
+ 			, NOW()
+ 		)
+ 	</insert>
+ 	<!-- lesson 03 ex02_2 -->
+ 	<insert id="insertReviewAsField" 
+ 	parameterType="map">
+ 		INSERT INTO `new_review`
+ 		(
+ 			`storeId`
+			, `menu`
+			, `userName`
+			, `point`
+			, `review`
+			, `createdAt`
+			, `updatedAt`
+ 		)
+ 		VALUES
+ 		(
+ 			#{storeId}
+ 			, #{menu}
+ 			, #{userName}
+ 			, #{point}
+ 			, #{review}
+ 			, NOW()
+ 			, NOW()
+ 		)
+ 	</insert>
  </mapper>
