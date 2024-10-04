@@ -22,4 +22,12 @@ public interface ReviewMapper {
 			@Param("userName") String userName, 
 			@Param("point") Double point, 
 			@Param("review") String review);
+	// input: id, review
+	// output: int(성공한 행의 갯수)
+	public int updateReviewById(
+			@Param("id") int id, 
+			@Param("review") String review);
+	// input: id
+	// output: int(성공한 행의 갯수)
+	public int deleteReviewById(int id);
 }
