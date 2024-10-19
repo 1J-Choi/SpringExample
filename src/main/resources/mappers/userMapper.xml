@@ -40,5 +40,16 @@
  		ORDER BY `id` DESC
  		LIMIT 1
  	</select>
- 	<!-- lesson04 ex01 3 -->
+ 	<!-- lesson06 ex02-->
+ 	<!-- return값이 int라도 boolean으로 하면 0:false 0이아닌 수:true가 된다 -->
+ 	<select id="isDuplicateName"
+ 	parameterType="String"
+ 	resultType="boolean">
+ 		SELECT
+ 			COUNT(*)
+ 		FROM
+ 			`new_user`
+ 		WHERE
+ 			`name` = #{name}
+ 	</select>
  </mapper>
