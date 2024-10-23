@@ -32,7 +32,10 @@ public class StudentBO {
 				.build();
 		
 		return studentRepository.save(student);
-
+	}
+	
+	public StudentEntity updateStudentDreamJobById(int id, String dreamJob) {
+		return ;
 	}
 	
 	// mybatis

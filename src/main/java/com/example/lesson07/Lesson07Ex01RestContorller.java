@@ -25,4 +25,11 @@ public class Lesson07Ex01RestContorller {
 		// save 된 객체를 리턴하므로 id가 채워져있다!
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
+	
+	// U:update
+	@GetMapping("/update")
+	public StudentEntity update() {
+		// id가 4인 dreamJob을 건물주로 바꾼다
+		return studentBO.updateStudentDreamJobById(4, "건물주");
+	}
 }
