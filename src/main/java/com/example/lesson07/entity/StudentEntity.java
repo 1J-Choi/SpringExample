@@ -20,7 +20,7 @@ import lombok.ToString;
 @ToString // domain or entity 값을 찍었을 때 자세한 정보를 보여주게 한다
 @AllArgsConstructor // 모든 파라미터가 있는 생성자
 @NoArgsConstructor // 파라미터가 없는 생성자(기본 생성자)
-@Builder // Setter 대용
+@Builder(toBuilder = true) // Setter 대용 (toBuilder = true 필드 수정 허용)
 @Getter
 @Entity // 이 객체는 Entity이다. DB-JPA 통신
 @Table(name = "new_student") // 테이블명, 지정 안하면 엔티티명이 테이블명으로 됨

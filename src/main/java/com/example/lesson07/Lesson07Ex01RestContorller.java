@@ -26,10 +26,18 @@ public class Lesson07Ex01RestContorller {
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
 	
-	// U:update
+	// U: update
 	@GetMapping("/update")
 	public StudentEntity update() {
 		// id가 4인 dreamJob을 건물주로 바꾼다
 		return studentBO.updateStudentDreamJobById(4, "건물주");
+	}
+	
+	// D: delete
+	@GetMapping("/delete")
+	public String delete() {
+		// id 5번 삭제
+		studentBO.deleteStudentById(5);
+		return "삭제 완료";
 	}
 }
